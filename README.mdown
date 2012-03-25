@@ -50,6 +50,10 @@ Check out the Example app for a usage example!
 <br> 
 ___
 
+FUTURE:
+-------
+- Add Support for landscape orientation
+
     
 LICENSE:
 -------
