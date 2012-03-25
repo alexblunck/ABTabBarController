@@ -1,0 +1,62 @@
+ABTabBarController is UITabBarController replacement which makes customizing your TabBar very easy / straight forward. 
+
+___
+
+FEATURES:
+===
+
+- Custom TabBar Implementation
+
+- Customizable TabBar Height
+
+- Default / Highlighted TabBarItem Images
+
+- Custom Background Image/Color
+
+- Works great with UINavigationController / UIViewController / UITableViewController
+
+- No Suprises!
+
+___
+
+USAGE:
+===
+
+1. Add All the files from the "ABTabBarController" to your project and import 	"ABTabBarController.h" into your desired class
+
+2. Every Tab you want to be existent in the TabBar is created using the "ABTabBarItem"<br/>
+	<code>
+        AbTabBarItem *tabBarItem = [[AbTabBarItem alloc] initWithImage:defaultTabImage 		selectedImage:selectedTabImage viewController:viewController]; <br/>
+    </code>
+    A ABTabBarItem requires you to specify the Tab's default UIImage, selected UIImage and the 	ViewController it's connected to. <br/>
+    The Images you need to supply need to be in a specific resoution, here's how to calculate the 	images resolution: <br/>
+    <strong>Height: 320 / NUMBER_OF_TABS <br/>
+    		Width: Whatever you set as the TabBar height
+    </strong><br/>
+    e.g. if you want to have 4 Tabs in your TabBar with a height of 50px the images you need to supply for each tab will need a resolution of 80x50 (retina: 160x100)
+
+3. Now you create the "ABTabBarController" and add all the created ABTabBarItems to it, you also 	need to specify the height and background Image: <br/>
+	<code>
+		ABTabBarController *tabBarController = [[ABTabBarController alloc] init]; <br/>
+    	tabBarController.tabBarItems = [NSArray arrayWithObjects:tabBarItem1, tabBarItem]; <br/>
+    	tabBarController.tabBarHeight = 50; <br/>
+    	tabBarController.backgroundImage = [UIImage imageNamed:@"tabbar_background.png"];
+	</code>
+
+4. Thats all there is, this should now give you complete control over you're TabBar's appearance! Be sure to check out the example app included in this repo.
+  
+Check out the Example app for a usage example!
+-------
+<br> 
+___
+
+    
+LICENSE:
+-------
+You can use this helper class in any personal & commercial project. All I ask is<br>
+that you don't sell the class itself<br>
+
+CONTACT:
+-------
+Feel free to contact me about any improvement requests / issues via mail<br>
+(contact@ablfx.com) or via Twitter (http://www.twitter.com/blunckalex)<br>
