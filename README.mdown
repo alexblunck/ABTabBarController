@@ -53,6 +53,7 @@ ___
 FUTURE:
 -------
 - Add Support for landscape orientation
+- Add iPad support
 
     
 LICENSE:
